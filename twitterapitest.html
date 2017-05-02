@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="twitterapitest.css"/>
+    <script type="text/javascript" src="js/oauth.js"></script>
+</head>
+
+<body>
+<p>Type Tweet</p>
+<h>I made this using angular js and I haven't learned any backend language yet, so I can't do the Rest-API part. I tried using OAuth.io but that also require localhost address so, I couldn't make it, I did only the front-end part and it splits tweet as per the assignment.</h><br><br> 
+<div ng-app="twtsplitter" ng-controller="splitter">
+  <textarea rows="10" cols="80" ng-model="twitval" maxlength="1400" ng-trim="false" class="tweettext" >
+  </textarea>
+  <center><button id="tweet" ng-click="PostTweet()"/>Tweet</center>
+  <li ng-repeat="twit in twittext" class="block"><h>Tweet({{$index+1}}) :</h><br> ({{$index+1}}/{{twittext.length}}) {{twit}}<br></li>
+
+
+</div>
+  <script type="text/javascript" src="js/angular/angular.js"></script>
+    <script type="text/javascript" src="js/twitterpost.js"></script>
+
+</body>
+</html>
